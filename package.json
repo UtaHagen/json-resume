@@ -1,0 +1,8 @@
+{
+  "name": "json-resume",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node -e \"console.log('No build step required')\""
+  }
+}
