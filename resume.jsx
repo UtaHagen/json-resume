@@ -9,10 +9,14 @@ const { useState, useMemo } = React;
 // ─────────────────────────────────────────────────────────────────────
 const RESUME = {
   name: "Xialin Huang",
-  server: "Anywhere",
-  poweredBy: "Coffee & curiosity & friends' cats",
-  Links: "forever student · artist · problem solver · entrepreneur",
+  server: "Planet Earth",
+  poweredBy: "Coffee & Curiosity & Friends' cats",
+  model: "Forever Student · Artist · Problem Solver · Entrepreneur",
   endpoint: "https://yourname.dev/resume",
+  links: [
+    { label: "GitHub", url: "https://github.com/UtaHagen" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/xialin-huang-699955249/" },
+  ],
 
   skills: {
     dataEngineering: [
@@ -46,118 +50,181 @@ const RESUME = {
       "power bi",
       "tableau",
     ],
-    tools: [
+    aiApplication: [
       "duckdb",
       "git",
       "github",
       "figma",
       "canva",
+      "tauri",
+      "typescript",
+      "react",
+      "qwen",
+      "openai",
+      "langgraph",
+      "tavily",
+      "whisper",
+      "agentic ai",
+      "speech-to-text",
+      "claude code",
+      "codex",
+      "rag",
     ],
   },
 
   education: [
     {
       school: "Middle Tennessee State University",
-      degree: "B.S. Computer Science",
-      dates:  "Aug 2023 — May 2027",
-      detail: "GPA 3.8 / Dean's List / Honors College",
+      degree: "B.S. Actuarial Science",
+      dates:  "Aug 2022 — May 2024",
+      detail: "Dean's List/ Minor in Theatre and Data Science",
+    },
+    {
+      school: "Ningbo University",
+      degree: "B.S. Mathematics & Applied Mathematics",
+      dates:  "Aug 2020 — Jun 2024",
+      detail: "",
     },
   ],
 
   experience: [
     {
-      role:    "Software Engineering Intern",
-      company: "Acme Labs",
-      dates:   "May 2025 — Aug 2025",
+      role:    "Forward Deployed Engineer",
+      company: "Construction  Company",
+      dates:   "June 2026 — Now",
       bullets: [
-        "Shipped a real-time dashboard used by 40+ internal users",
-        "Cut p95 API latency by 38% with a Redis cache layer",
-        "Wrote 200+ unit tests; raised coverage from 51% → 86%",
+        "Designed and deployed an AI-powered document intelligence platform for construction company, automating receipt ingestion, OCR extraction, human-in-the-loop validation, categorization, and structured data storage.",
+        "Built a desktop application using Tauri, TypeScript, Python, DuckDB, and LLM APIs, enabling end-to-end document processing through a local-first architecture.",
+        "Developed configurable extraction workflows for multiple receipt and invoice formats using OCR, structured outputs, schema validation, and LLM post-processing.",
+        "Created an evaluation-driven testing framework that benchmarks prompt, model, and workflow performance against labeled datasets, enabling rapid iteration and measurable quality improvements.",
       ],
-      skills: ["typescript", "react", "node.js", "postgres", "docker", "aws"],
+      skills: ["typescript", "react", "qwen", "git", "duckdb", "tauri", "codex"],
     },
     {
-      role:    "Undergraduate Research Assistant",
-      company: "MTSU CS Dept.",
-      dates:   "Jan 2025 — Present",
+      role:    "BI Consultant - Data Engineer",
+      company: "LBMC, PC",
+      dates:   "Janurary 2024 — December 2025",
       bullets: [
-        "Built an ML pipeline classifying 12K+ research abstracts",
-        "Co-author on a paper accepted to a regional conference",
+        "Worked within LBMC Data Science & Analytics Consulting team, delivering end-to-end data and AI solutions for mid-sized clients across healthcare, retail, utilities, and private equity industries.",
+        "Responsibilities included data platform development, ETL pipeline engineering, business intelligence and analytics, machine learning model development, and production deployment of LLM applications.",
       ],
-      skills: ["python", "flask", "postgres", "linux"],
+      skills: ["azure", "azure data factory", "azure functions", "azure blob storage", "azure devops", "ci/cd", "workflow orchestration", "rag"],
+    },
+    {
+      role:    "Actuarial Intern",
+      company: "Selective Insurance of America",
+      dates:   "May 2023 — August 2023",
+      bullets: [
+        "Worked in personal lines pricing and assisted actuaries with homeowner, auto, and PUP evaluations",
+        "Utilized Access to calculate the base rate impact for three PUP states, while debugging in SQL",
+        "Employed Excel for policy checks and rate updates to enhance GLM accuracy for both hurricane and non-hurricane states",
+        "Enhanced efficiency in policy premium checks through automation by pulling data from the Access rater to Excel",
+        "Collaborated with 5 interns to present an action learning project on Selective's methodologies, aiding manufacturing clients in addressing current challenges; subsequently presented to the executive team",
+      ],
+      skills: ["python", "excel", "access", "macro"],
     },
   ],
 
   projects: [
     {
-      name:    "Trailmix",
-      tagline: "Crowdsourced hiking trail conditions",
-      detail:  "Mobile-first map app with user-submitted condition reports & offline caching.",
-      skills:  ["react", "next.js", "typescript", "mongodb", "tailwind"],
-      link:    "github.com/you/trailmix",
+      "name": "Actuarial Exams Prepara@on website – YosoraAI",
+      "tagline": "An app that uses AI for learning actuarial exams",
+      "detail": "Reddit SenOment Pipeline: Developed a DuckDB + Ollama ETL workflow to extract, process, and score subreddit sentiment, generaOng insights into real user needs to guide web applicaOon feature development. Developed custom UI/UX prototypes in Figma and implemented producOon interfaces in TypeScript. Built a full-stack AI Tutor applicaOon using Next.js, FastAPI, Supabase, Clerk, OpenAI APIs. Designed an LLM agent with short and long-term memory, user progress tracking.",
+      "link": "",
+      "skills": ["duckdb", "ollama", "etl", "figma", "typescript", "next.js", "fastapi", "supabase", "clerk", "openai", "llm", "agentic ai"]
     },
     {
-      name:    "ledger.sh",
-      tagline: "CLI personal-finance ledger",
-      detail:  "Plain-text accounting tool. 4-week sprint, 1.2K LOC, ~120 GitHub stars.",
-      skills:  ["python", "sql", "linux", "git"],
-      link:    "github.com/you/ledger-sh",
+      "name": "OBGYN Healthcare Analytics Platform",
+      "tagline": "Healthcare operations analytics and executive reporting",
+      "detail": "Partnered with CFO and operations leadership to build a healthcare analytics platform integrating patient, appointment, financial, and clinical data. Developed 13 Power BI dashboards covering patient retention, postpartum follow-up, physician productivity, and revenue performance. Designed patient lifecycle analytics and physician performance evaluation frameworks to support operational decision-making and resource allocation.",
+      "link": "",
+      "skills": ["power bi", "sql", "healthcare analytics", "data modeling", "business intelligence"]
     },
     {
-      name:    "Stagelight",
-      tagline: "Live-event seat-finder bot",
-      detail:  "Polls ticket APIs, alerts on resale dips. Currently watching 8 venues.",
-      skills:  ["node.js", "express", "typescript", "postgres", "docker"],
-      link:    "github.com/you/stagelight",
+      "name": "Orthodontics Data Platform Modernization",
+      "tagline": "Databricks Lakehouse migration and patient acquisition analytics",
+      "detail": "Modernized a multi-location orthodontics organization's data platform by migrating legacy SQL Server workloads to Databricks Lakehouse. Rebuilt core data models using Medallion Architecture, integrated patient, billing, scheduling, and marketing APIs, and developed patient acquisition attribution models using website forms, call center interactions, and ActiveCampaign data. Supported call center analytics using speech transcription and text analysis.",
+      "link": "",
+      "skills": ["databricks", "pyspark", "sql", "delta lake", "unity catalog", "python", "api integration", "marketing analytics"]
     },
     {
-      name:    "Paperwhite",
-      tagline: "Daily reading-streak tracker",
-      detail:  "Side-project that became how I read 40 books last year. PWA, no signup.",
-      skills:  ["react", "javascript", "html/css", "tailwind"],
-      link:    "paperwhite.app",
+      "name": "Healthcare Expense Risk Analytics",
+      "tagline": "Expense anomaly detection and risk monitoring",
+      "detail": "Built a transaction risk analytics solution using employee credit card and organizational data. Applied PCA for feature reduction and K-Means clustering to identify anomalous spending patterns, flagging approximately 1-5% of transactions for audit review. Developed Power BI dashboards to support risk investigations and internal control monitoring.",
+      "link": "",
+      "skills": ["python", "machine learning", "pca", "k-means", "power bi", "risk analytics"]
     },
     {
-      name:    "abstract-sort",
-      tagline: "Research paper classifier",
-      detail:  "BERT-based labeler for ML research abstracts. 91% F1 on holdout set.",
-      skills:  ["python", "flask", "postgres"],
-      link:    "github.com/you/abstract-sort",
+      "name": "Senior Care Risk Stratification",
+      "tagline": "Patient segmentation and fall risk prediction",
+      "detail": "Integrated patient health records, chronic condition indicators, household information, and outreach call data to build patient profiles and risk segmentation models. Applied clustering techniques to identify high-risk populations and developed a fall risk prediction model to support proactive care management and resource planning.",
+      "link": "",
+      "skills": ["python", "machine learning", "clustering", "predictive analytics", "healthcare", "data science"]
     },
     {
-      name:    "Pinpoint",
-      tagline: "Lost-and-found for college campuses",
-      detail:  "Hackathon winner — Hack MT 2024. Built in 36 hours by a team of 3.",
-      skills:  ["java", "c++", "sql", "figma"],
-      link:    "devpost.com/pinpoint",
+      "name": "Retail Demand Forecasting Platform",
+      "tagline": "Large-scale sales forecasting and MLOps",
+      "detail": "Built a demand forecasting platform for a U.S. home furnishings retailer using PySpark and SQL to process large-scale sales datasets. Developed forecasting models using Prophet and Nixtla, and implemented end-to-end MLOps workflows with MLflow for experiment tracking, model monitoring, and version management.",
+      "link": "",
+      "skills": ["pyspark", "sql", "prophet", "nixtla", "mlflow", "forecasting", "databricks"]
     },
+    {
+      "name": "Agentic AI Research Platform",
+      "tagline": "Autonomous company research using LLM agents",
+      "detail": "Built and deployed an agentic AI research system for a private equity firmusing LangGraph, OpenAI, Tavily, Azure Functions, and MLflow. Automated portfolio company research through tool calling, prompt engineering, evaluation-driven development, and workflow orchestration.",
+      "link": "",
+      "skills": ["langgraph", "openai", "tavily", "azure functions", "mlflow", "agentic ai", "prompt engineering", "rag", "tool-calling"]
+    },
+    {
+      "name": "Enterprise RAG Knowledge Assistant",
+      "tagline": "Institutional knowledge retrieval with citations",
+      "detail": "Developed a retrieval-augmented generation (RAG) application on Databricks with document-level citations and source highlighting, enabling users to search and retrieve information from large collections of unstructured PDF documents.",
+      "link": "",
+      "skills": ["rag", "databricks", "llm", "vector search", "python", "knowledge retrieval"]
+    },
+    {
+      "name": "Document Intelligence Platform",
+      "tagline": "OCR and structured data extraction workflow",
+      "detail": "Designed a document intelligence workflow combining PaddleOCR, LLM-based extraction, schema validation, confidence scoring, and human-in-the-loop review processes to transform unstructured contracts and business documents into validated structured datasets.",
+      "link": "",
+      "skills": ["paddleocr", "llm", "document ai", "structured outputs", "validation", "human-in-the-loop", "rag"]
+    },
+    {
+      "name": "Sales Intelligence Assistant",
+      "tagline": "Conversation analytics and coaching recommendations",
+      "detail": "Developed an automated pipeline that transcribes sales recordings using Whisper, extracts actionable insights with LLMs, generates coaching recommendations for sales representatives, and publishes performance dashboards for management teams.",
+      "link": "",
+      "skills": ["whisper", "openai", "speech-to-text", "analytics",]
+    },
+    {
+      "name": "Enterprise Data Platform Modernization",
+      "tagline": "Databricks Lakehouse migration and governance",
+      "detail": "Migrated legacy SQL Server workloads into a Databricks Lakehouse architecture using PySpark, Delta Lake, and Unity Catalog. Improved scalability, governance, and maintainability of enterprise data pipelines while modernizing analytics infrastructure.",
+      "link": "",
+      "skills": ["databricks", "pyspark", "delta lake", "unity catalog", "sql", "data engineering"]
+    },
+    {
+      "name": "Music Industry Data Warehouse",
+      "tagline": "Medallion architecture and enterprise reporting",
+      "detail": "Architected a Bronze/Silver/Gold Medallion Architecture data warehouse with ingestion pipelines integrating IBM iAccess systems and downstream analytics workloads, supporting enterprise reporting and business intelligence for a music record company.",
+      "link": "",
+      "skills": ["databricks", "medallion architecture", "etl", "sql", "data warehousing", "business intelligence"]
+    }
   ],
 
   activities: [
     {
-      name:   "ACM @ MTSU — Vice President",
-      dates:  "2024 — Present",
-      detail: "Run weekly workshops; organize the annual hackathon (200+ attendees).",
-      skills: ["python", "javascript", "git", "figma"],
-    },
-    {
-      name:   "Open Source — react-tinypath",
-      dates:  "2024",
-      detail: "Maintainer. 80+ stars, used in 14 downstream packages on npm.",
-      skills: ["typescript", "react"],
-    },
-    {
-      name:   "Tutoring — University Learning Center",
+      name:   "Data Science Club @ MTSU —  President",
       dates:  "2023 — 2024",
-      detail: "Tutored ~30 students/week in intro programming & data structures.",
-      skills: ["java", "c++", "python"],
+      detail: "Run workshops; host events; organize volunteer opportunities..",
+      skills: ["discord channel", "event organization"],
     },
     {
-      name:   "Hackathon — Hack MT 2024 (1st place)",
-      dates:  "Oct 2024",
-      detail: "Built Pinpoint. Awarded best campus-life project.",
-      skills: ["java", "c++", "sql", "figma"],
-    },
+      name:   "University of Watshington - Enterprener Compitition",
+      dates:  "2024",
+      detail: "With 2 teammates, build a stock portofolio management system as a startup company for people without professional financial advisors.",
+      skills: ["evidence", "react"],
+    }
   ],
 };
 
@@ -241,6 +308,7 @@ const PAGES = [
 function App() {
   const [selected, setSelected] = useState(() => new Set());
   const [page, setPage] = useState("skills");
+  const [theme, setTheme] = useState("day");
   const activePage = PAGES.find((p) => p.id === page);
   const anySelected = selected.size > 0;
 
@@ -290,7 +358,7 @@ function App() {
   const matchActivities = visibleActivities.filter((a) => a._match).length;
 
   return (
-    <div className="receipt-wrap">
+    <div className={`receipt-wrap theme-${theme}`}>
       <div className="receipt">
 
         {/* brand */}
@@ -308,8 +376,33 @@ function App() {
         {/* http headers */}
         <div className="headers">
           <div><span className="h-key">Server:</span>      <span className="h-val">{RESUME.server}</span></div>
-          <div><span className="h-key">X-Powered-By:</span><span className="h-val">{RESUME.poweredBy}</span></div>
+          <div><span className="h-key">X-Powered-By:</span> <span className="h-val">{RESUME.poweredBy}</span></div>
           <div><span className="h-key">Model:</span>       <span className="h-val">{RESUME.model}</span></div>
+          <div>
+            <span className="h-key">Links:</span>{" "}
+            <span className="h-val">
+              {RESUME.links.map((link, i) => (
+                <React.Fragment key={link.label}>
+                  <a href={link.url} target="_blank" rel="noreferrer">{link.label}</a>
+                  {i < RESUME.links.length - 1 && <span>, </span>}
+                </React.Fragment>
+              ))}
+            </span>
+          </div>
+          <div>
+            <span className="h-key">Theme:</span>{" "}
+            <span className="h-val">
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setTheme(theme === "day" ? "night" : "day");
+                }}
+              >
+                {theme}
+              </a>
+            </span>
+          </div>
         </div>
 
         {/* file tabs */}
@@ -549,5 +642,137 @@ function App() {
     </div>
   );
 }
+
+
+const themeStyles = document.createElement("style");
+themeStyles.textContent = `
+.tabs {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.tab:first-child {
+  margin-left: 0;
+}
+
+body:has(.theme-night) {
+  background: #080b10;
+}
+
+.theme-night {
+  background: #080b10;
+}
+
+.theme-night .receipt {
+  background: #111827;
+  color: #e8edf3;
+  border-color: #263244;
+  box-shadow: 0 18px 60px rgba(0,0,0,.55);
+}
+
+.theme-night .brand-mark {
+  background: #e8edf3;
+  box-shadow: inset 0 0 0 2px #c8d3df;
+}
+
+.theme-night .brand-name,
+.theme-night .h-key,
+.theme-night .h-val,
+.theme-night .key,
+.theme-night .str,
+.theme-night .quote,
+.theme-night .filename,
+.theme-night .curl,
+.theme-night .footer,
+.theme-night .punc,
+.theme-night .brace,
+.theme-night .verb,
+.theme-night .filter-count,
+.theme-night .skill,
+.theme-night .skill-tag {
+  color: #e8edf3;
+}
+
+.theme-night .comment {
+  color: #98a6b8;
+}
+
+.theme-night a {
+  color: #d7ba7d;
+}
+
+.theme-night .tabs {
+  border-color: #263244;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.theme-night .tab:first-child {
+  margin-left: 0;
+}
+
+.theme-night .tab {
+  background: #172033;
+  color: #cfd8e3;
+  border-color: #263244;
+}
+
+.theme-night .tab.active {
+  background: #243047;
+  color: #ffffff;
+  border-color: #3a4b66;
+}
+
+.theme-night .tab .dot {
+  background: #98a6b8;
+}
+
+.theme-night .tab.active .dot {
+  background: #d7ba7d;
+}
+
+.theme-night .file-frame {
+  background: #243047;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.theme-night .filename {
+  background: #243047;
+  border-color: transparent;
+}
+
+.theme-night .json {
+  background: #243047;
+}
+
+.theme-night .divider {
+  color: #627084;
+}
+
+.theme-night .skill.selected,
+.theme-night .skill-group-key.selected,
+.theme-night .skill-tag.matched {
+  background: rgba(215, 186, 125, .18);
+  color: #f2dfb1;
+  border-color: rgba(215, 186, 125, .45);
+}
+
+.theme-night .skill.dim,
+.theme-night .entry.hidden {
+  opacity: .34;
+}
+
+.theme-night .pill {
+  background: #243047;
+  color: #e8edf3;
+  border-color: #3a4b66;
+}
+
+.theme-night .barcode {
+  filter: invert(1) opacity(.78);
+}
+`;
+document.head.appendChild(themeStyles);
 
 ReactDOM.createRoot(document.getElementById("root")).render(<App />);
