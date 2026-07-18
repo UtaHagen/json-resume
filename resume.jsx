@@ -300,16 +300,9 @@ function SkillTagList({ skills, selected }) {
 // main app
 // ─────────────────────────────────────────────────────────────────────
 
-const PAGES = [
-  { id: "skills",     file: "skills.json",     mode: "interactive" },
-  { id: "background", file: "background.json", mode: "read-only"   },
-];
-
 function App() {
   const [selected, setSelected] = useState(() => new Set());
-  const [page, setPage] = useState("skills");
   const [theme, setTheme] = useState("day");
-  const activePage = PAGES.find((p) => p.id === page);
   const anySelected = selected.size > 0;
 
   const toggle = (name) => {
@@ -370,7 +363,7 @@ function App() {
         {/* curl */}
         <div className="curl">
           <span className="verb">curl -X GET </span>
-          <span className="quote">"{RESUME.endpoint}/{activePage.file}"</span>
+          <span className="quote">"{RESUME.endpoint}"</span>
         </div>
 
         {/* http headers */}
@@ -405,30 +398,13 @@ function App() {
           </div>
         </div>
 
-        {/* file tabs */}
-        <div className="tabs" role="tablist">
-          {PAGES.map((p) => (
-            <button
-              key={p.id}
-              role="tab"
-              aria-selected={page === p.id}
-              className={"tab" + (page === p.id ? " active" : "")}
-              onClick={() => setPage(p.id)}
-            >
-              <span className="dot" aria-hidden="true"></span>{p.file}
-            </button>
-          ))}
-        </div>
-
         <div className="file-frame">
           <div className="filename">
-            <span>~/resume/{activePage.file}</span>
-            <span>{activePage.mode}</span>
+            <span>~/resume.json</span>
+            <span>interactive</span>
           </div>
 
-          {/* ── skills tab ── */}
-          {page === "skills" && (
-            <div className="json">
+          <div className="json">
               <div className="brace">{"{"}</div>
 
               {/* skills section */}
@@ -550,16 +526,7 @@ function App() {
                   </div>
                 </div>
               ))}
-              <div className="row indent-1"><span className="punc">]</span></div>
-
-              <div className="brace">{"}"}</div>
-            </div>
-          )}
-
-          {/* ── background tab ── */}
-          {page === "background" && (
-            <div className="json">
-              <div className="brace">{"{"}</div>
+              <div className="row indent-1"><span className="punc">],</span></div>
 
               {/* education */}
               <div className="row indent-1">
@@ -627,8 +594,7 @@ function App() {
               <div className="row indent-1"><span className="punc">]</span></div>
 
               <div className="brace">{"}"}</div>
-            </div>
-          )}
+          </div>
         </div>
 
         {/* receipt footer */}

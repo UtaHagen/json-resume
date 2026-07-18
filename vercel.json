@@ -21,6 +21,10 @@
       "dest": "/api/resume.js"
     },
     {
+      "src": "/resume",
+      "dest": "/api/resume.js"
+    },
+    {
       "src": "/resume.jsx",
       "dest": "/resume.jsx"
     },
