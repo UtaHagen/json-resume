@@ -12,7 +12,7 @@ const RESUME = {
   server: "Planet Earth",
   poweredBy: "Coffee & Curiosity & Friends' cats",
   model: "Forever Student · Artist · Problem Solver · Entrepreneur",
-  endpoint: "https://yourname.dev/resume",
+  endpoint: "https://xialin-resume-rho.vercel.app/resume",
   links: [
     { label: "GitHub", url: "https://github.com/UtaHagen" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/xialin-huang-699955249/" },
