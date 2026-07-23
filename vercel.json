@@ -13,6 +13,14 @@
     {
       "src": "resume.jsx",
       "use": "@vercel/static"
+    },
+    {
+      "src": "resume-pdf.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "resume.pdf",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -27,6 +35,14 @@
     {
       "src": "/resume.jsx",
       "dest": "/resume.jsx"
+    },
+    {
+      "src": "/resume-pdf",
+      "dest": "/resume-pdf.html"
+    },
+    {
+      "src": "/resume.pdf",
+      "dest": "/resume.pdf"
     },
     {
       "src": "/",
